@@ -1,0 +1,106 @@
+<!--Section: Testimonials-->
+<section class="text-center">
+
+    <!--Section heading-->
+    <h2 class="h1 pt-4">Posts</h2>
+    <!--Section description-->
+    <p class="grey-text mb-5 mt-5 px-3">"Feel Free To Express... "</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4" *ngFor="let post of posts" >
+
+            <!--Card-->
+            <div class="card testimonial-card">
+
+                <!--Background color-->
+                <div class="card-up sunny-morning-gradient">
+                </div>
+
+                <!--Avatar-->
+                <div class="avatar mx-auto"><img src="{{post.img}}" class="rounded-circle img-responsive" alt="Example photo">
+                </div>
+
+                <div class="card-body">
+                    <!--Name-->
+                    <h4 class="card-title mt-1" (click)="OpenUserModal(post.id)">{{post?.username}}</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p><i class="fa fa-quote-left"></i> {{post.title}}</p>
+                </div>
+
+            </div>
+            <!--Card-->
+
+        </div>
+
+    </div>
+
+</section>
+<!--Section: Testimonials-->
+
+
+
+<!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{postDetails?.name}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+          </div>
+
+
+
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-6" >
+                  <label> Name :</label>
+                </div>
+                <div class="col-6">
+                    <label >{{postDetails?.name}}</label>
+                </div>
+
+                <div class="col-6">
+                  <label >UserName :</label>
+                </div>
+                <div class="col-6">
+                    {{postDetails?.username}}
+                </div>
+
+                <div class="col-6">
+                  <label >Post Title :</label>
+                </div>
+                <div class="container col-6">
+                    {{postDetails?.title}}
+                </div>
+
+                <div class="container col-6">
+                  <label >
+                    Post :
+                  </label>
+                </div>
+                <div class="container col-6">
+                    {{postDetails?.body}}
+                </div>
+
+
+
+
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>

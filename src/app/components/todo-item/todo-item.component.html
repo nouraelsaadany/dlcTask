@@ -1,0 +1,15 @@
+
+    
+<div [ngClass]="setClasses()">
+  <p>
+    
+    <input (change)="onToggle(todo)" type="checkbox" >
+
+    {{ todo.title }} 
+    <a (click)="openModal()" > {{todo.username}} </a>
+
+    <button (click)="onDelete(todo)" class="del"> X </button>
+
+  </p>
+</div>
+

@@ -1,0 +1,17 @@
+.header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .header a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .nav-bk3{
+    background: #00F260;  
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  
+    background: linear-gradient(to right, #0575E6, #00F260); 
+    
+    }

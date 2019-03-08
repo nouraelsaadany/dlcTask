@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row ">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+
+        </div>
+
+        <div class="card testimonial-card">
+
+          <!--Background color-->
+          <div class="container card-up sunny-morning-gradient">
+          </div>
+
+          <!--Avatar-->
+          <div class="avatar mx-auto">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(33).jpg" class="rounded-circle img-responsive" alt="Example photo">
+          </div>
+
+          <div class="card-body">
+            <!--Name-->
+
+            <div class="profile-usertitle-name">
+              <h1>{{user?.username}}</h1>
+            </div>
+            <div class="profile-usertitle-job">
+              so
+            </div>
+            <hr>
+            <!--Quotation-->
+            <p>
+              <i class="fa fa-quote-left"></i> dd</p>
+          </div>
+
+        </div>
+        <!--Card-->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+          <button type="button" class="btn btn-success btn-sm">Follow</button>
+          <button type="button" class="btn btn-danger btn-sm">Message</button>
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="#">
+                <i class="glyphicon glyphicon-home"></i>
+                Overview </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="glyphicon glyphicon-user"></i>
+                Account Settings </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="glyphicon glyphicon-ok"></i>
+                Tasks </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="glyphicon glyphicon-flag"></i>
+                Help </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-6">
+
+
+          <div class="card" style="width: 18rem;">
+              <div class="card-header">
+                Todos
+              </div>
+              <ul class="list-group list-group-flush" *ngFor="let todo of todos ">
+                <li class="list-group-item">{{todo?.title}}</li>
+              </ul>
+            </div>
+            
+        </div>
+        <div class="col-md-6" *ngFor="let post of posts">
+            <div class="card">
+                <h5 class="card-header">Post</h5>
+                <div class="card-body">
+                  <h5 class="card-title">{{post?.title}}</h5>
+                  <p class="card-text">{{post?.body}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
