@@ -63,7 +63,7 @@ export class PostsComponent implements OnInit {
           this.posts[i].name= this.users[j].name;
           const randomNumber = Math.floor(Math.random() * 6) + 1;
 
-          this.posts[i].img  = "https://mdbootstrap.com/img/Photos/Avatars/img%10(" +randomNumber +").jpg";
+          this.posts[i].img  = "https://mdbootstrap.com/img/Photos/Avatars/img%20(" +randomNumber +").jpg";
         }
       }
     }
